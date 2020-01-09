@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="apple-mobile-web-app-title" content="CodePen">
-
 <title> AACoding02-8</title>
 <style>
 .correct{
@@ -29,12 +27,13 @@
 $("input").change(onchange);
 
 function onchange(){
-  let correct = $("this").data("correct");
-  let response = $("this").val();
+  let correct = $(this).data("correct");
+  let response = $(this).val()
+  console.log(correct,response)
   if(correct == response){
-    $("this").removeClass("incorrect").addClass("correct");
+    $(this).removeClass("incorrect").addClass("correct");
   } else{
-    $("this").removeClass("correct").addClass("incorrect");
+    $(this).removeClass("correct").addClass("incorrect");
   }
 }
     </script>
